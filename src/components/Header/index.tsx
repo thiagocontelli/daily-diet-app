@@ -1,5 +1,3 @@
-import { Image } from 'react-native';
-
 import { Container, Logo, UserImg } from './style';
 
 import logoImg from '../../assets/logo.png';

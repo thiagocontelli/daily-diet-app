@@ -14,9 +14,5 @@ export default function App() {
 		Nunito_700Bold,
 	});
 
-	return (
-		<ThemeProvider theme={theme}>
-			<Home />
-		</ThemeProvider>
-	);
+	return <ThemeProvider theme={theme}>{fontsLoaded && <Home />}</ThemeProvider>;
 }
