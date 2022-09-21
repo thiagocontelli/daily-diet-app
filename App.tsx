@@ -1,5 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+
+import { Home } from './src/screens/Home';
+
 import {
 	useFonts,
 	Nunito_400Regular,
@@ -16,10 +19,7 @@ export default function App() {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<View>
-				<Text>Open up App.tsx to start working on your app!</Text>
-				<StatusBar style="auto" />
-			</View>
+			<Home />
 		</ThemeProvider>
 	);
 }
