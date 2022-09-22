@@ -7,7 +7,7 @@ export function Header() {
 	return (
 		<Container>
 			<Logo source={logoImg}></Logo>
-			<UserImg></UserImg>
+			<UserImg source={userImg}></UserImg>
 		</Container>
 	);
 }

@@ -11,7 +11,7 @@ export const Container = styled.View`
 
 export const Logo = styled.Image``;
 
-export const UserImg = styled.View`
+export const UserImg = styled.Image`
 	width: 40px;
 	height: 40px;
 
