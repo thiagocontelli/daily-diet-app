@@ -18,5 +18,5 @@ export const UserImg = styled.Image`
 	border-radius: 100px;
 
 	background-color: transparent;
-	border: 3px solid black;
+	border: 2px solid black;
 `;
