@@ -1,3 +1,4 @@
+import { AddNewMeal } from '../../components/AddNewMeal';
 import { Header } from '../../components/Header';
 import { Stats } from '../../components/Stats';
 
@@ -8,6 +9,7 @@ export function Home() {
 		<Container>
 			<Header />
 			<Stats />
+			<AddNewMeal />
 		</Container>
 	);
 }
