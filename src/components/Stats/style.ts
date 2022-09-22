@@ -3,7 +3,6 @@ import { ArrowUpRight } from 'phosphor-react-native';
 
 export const Container = styled.View`
 	width: 100%;
-	height: 100px;
 
 	background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
 
@@ -14,6 +13,8 @@ export const Container = styled.View`
 	border-radius: 8px;
 
 	margin-top: 20px;
+
+	padding: 20px;
 `;
 
 export const Percent = styled.Text`
@@ -32,7 +33,11 @@ export const Subtext = styled.Text`
 	`}
 `;
 
-// export const Arrow = styled(ArrowUpRight).attrs(({ theme }) => ({
-// 	size: 32,
-// 	color: theme.COLORS.GREEN_DARK,
-// }))``;
+export const Arrow = styled(ArrowUpRight).attrs(({ theme }) => ({
+	size: 24,
+	color: theme.COLORS.GREEN_DARK,
+}))`
+	position: absolute;
+	right: 10px;
+	top: 10px;
+`;
