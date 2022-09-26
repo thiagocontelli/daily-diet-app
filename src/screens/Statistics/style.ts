@@ -2,14 +2,19 @@ import styled, { css } from 'styled-components/native';
 
 import { TouchableOpacity } from 'react-native';
 
-import { ArrowLeft } from 'phosphor-react-native';
-
 type Props = {
 	type: 'PRIMARY' | 'SECONDARY';
 };
 
-export const Container = styled.View`
-	background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
+export const Container = styled.View<Props>`
+	${({ theme, type }) =>
+		type === 'PRIMARY'
+			? css`
+					background-color: ${theme.COLORS.GREEN_LIGHT};
+			  `
+			: css`
+					background-color: ${theme.COLORS.RED_LIGHT};
+			  `}
 
 	align-items: center;
 	justify-content: flex-end;
@@ -109,10 +114,7 @@ export const Container5 = styled.View<Props>`
 			  `}
 `;
 
-export const BackIcon = styled(ArrowLeft).attrs(({ theme }) => ({
-	size: 32,
-	color: theme.COLORS.GREEN_DARK,
-}))`
+export const BackButton = styled(TouchableOpacity)`
 	position: absolute;
 	top: 35px;
 	left: 20px;

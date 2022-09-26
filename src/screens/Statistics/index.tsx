@@ -8,15 +8,27 @@ import {
 	StatsNumber,
 	Texts,
 	Title,
-	BackIcon,
+	BackButton,
 } from './style';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
-export function Statistics() {
+import { TouchableOpacityProps } from 'react-native';
+
+type Props = TouchableOpacityProps & {
+	type?: 'PRIMARY' | 'SECONDARY';
+};
+
+export function Statistics({ type = 'PRIMARY', ...rest }) {
 	return (
-		<Container>
-			<BackIcon />
+		<Container type={type}>
+			<BackButton {...rest}>
+				<MaterialIcons
+					name="arrow-back"
+					size={30}
+					color={type === 'PRIMARY' ? '#639339' : '#BF3B44'}
+				/>
+			</BackButton>
 			<Percent>90,86%</Percent>
 			<Texts style={{ marginBottom: 34 }}>das refeições dentro da dieta</Texts>
 			<Container2>
