@@ -22,22 +22,6 @@ export const Container = styled.View<Props>`
 	flex: 1;
 `;
 
-export const Container2 = styled.View`
-	background-color: ${({ theme }) => theme.COLORS.WHITE};
-
-	width: 100%;
-	height: 75%;
-
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-
-	margin-top: 32px;
-
-	align-items: center;
-
-	padding-top: 30px;
-`;
-
 export const Title = styled.Text`
 	${({ theme }) => css`
 		font-size: ${theme.FONT_SIZE.MD}px;
