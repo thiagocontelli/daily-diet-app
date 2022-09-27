@@ -22,24 +22,6 @@ export const Container = styled.View<Props>`
 	flex: 1;
 `;
 
-export const Percent = styled.Text`
-	${({ theme }) => css`
-		font-family: ${theme.FONT_FAMILY.BOLD};
-		color: ${theme.COLORS.GRAY_1};
-	`}
-
-	font-size: 32px;
-`;
-
-export const Texts = styled.Text`
-	${({ theme }) => css`
-		font-size: ${theme.FONT_SIZE.MD}px;
-		color: ${theme.COLORS.GRAY_2};
-	`}
-
-	text-align: center;
-`;
-
 export const Container2 = styled.View`
 	background-color: ${({ theme }) => theme.COLORS.WHITE};
 
@@ -49,7 +31,7 @@ export const Container2 = styled.View`
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 
-  margin-top: 32px;
+	margin-top: 32px;
 
 	align-items: center;
 
@@ -66,54 +48,11 @@ export const Title = styled.Text`
 	margin-bottom: 23px;
 `;
 
-export const StatsNumber = styled.Text`
-	${({ theme }) => css`
-		font-family: ${theme.FONT_FAMILY.BOLD};
-		color: ${theme.COLORS.GRAY_1};
-	`}
-	font-size: 24px;
-`;
-
-export const Container3 = styled.View`
-	align-items: center;
-	justify-content: center;
-
-	margin-bottom: 12px;
-
-	padding: 16px;
-
-	width: 90%;
-
-	border-radius: 8px;
-
-	background-color: ${({ theme }) => theme.COLORS.GRAY_6};
-`;
-
 export const Container4 = styled.View`
 	flex-direction: row;
 	justify-content: space-between;
 
 	width: 90%;
-`;
-
-export const Container5 = styled.View<Props>`
-	align-items: center;
-	justify-content: center;
-
-	width: 49%;
-
-	border-radius: 8px;
-
-	padding: 16px;
-
-	${({ theme, type }) =>
-		type === 'PRIMARY'
-			? css`
-					background-color: ${theme.COLORS.GREEN_LIGHT};
-			  `
-			: css`
-					background-color: ${theme.COLORS.RED_LIGHT};
-			  `}
 `;
 
 export const BackButton = styled(TouchableOpacity)`
