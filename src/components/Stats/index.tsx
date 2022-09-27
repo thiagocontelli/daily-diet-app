@@ -1,12 +1,12 @@
 import { Text } from 'react-native';
+import { TitleSubtitle } from '../TitleSubtitle';
 import { Container, Percent, Arrow } from './style';
 
 export function Stats() {
 	return (
 		<Container>
 			<Arrow />
-			<Percent>90,86%</Percent>
-			<Text>das refeições dentro da dieta</Text>
+			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 		</Container>
 	);
 }

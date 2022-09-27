@@ -15,6 +15,8 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import { TouchableOpacityProps } from 'react-native';
 
+import { TitleSubtitle } from '../../components/TitleSubtitle';
+
 type Props = TouchableOpacityProps & {
 	type?: 'PRIMARY' | 'SECONDARY';
 };
@@ -29,8 +31,7 @@ export function Statistics({ type = 'PRIMARY', ...rest }) {
 					color={type === 'PRIMARY' ? '#639339' : '#BF3B44'}
 				/>
 			</BackButton>
-			<Percent>90,86%</Percent>
-			<Texts style={{ marginBottom: 34 }}>das refeições dentro da dieta</Texts>
+			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 			<Container2>
 				<Title>Estatísticas Gerais</Title>
 				<Container3>
