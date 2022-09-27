@@ -1,4 +1,4 @@
-import { Home } from './src/screens/Home';
+import { Routes } from './src/routes';
 
 import {
 	useFonts,
@@ -14,5 +14,5 @@ export default function App() {
 		Nunito_700Bold,
 	});
 
-	return <ThemeProvider theme={theme}>{fontsLoaded && <Home />}</ThemeProvider>;
+	return <ThemeProvider theme={theme}>{fontsLoaded && <Routes />}</ThemeProvider>;
 }
