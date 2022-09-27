@@ -12,6 +12,7 @@ import { TouchableOpacityProps } from 'react-native';
 import { TitleSubtitle } from '../../components/TitleSubtitle';
 import { StatsBox } from '../../components/StatsBox';
 import { RoundBg } from '../../components/RoundBg';
+import { Bg } from '../../components/Bg';
 
 type Props = TouchableOpacityProps & {
 	type?: 'PRIMARY' | 'SECONDARY';
@@ -19,7 +20,7 @@ type Props = TouchableOpacityProps & {
 
 export function Statistics({ type = 'PRIMARY', ...rest }: Props) {
 	return (
-		<Container type={type}>
+		<Bg type={type}>
 			<BackButton {...rest}>
 				<MaterialIcons
 					name="arrow-back"
@@ -37,6 +38,6 @@ export function Statistics({ type = 'PRIMARY', ...rest }: Props) {
           <StatsBox width='49%' number='10' text='refeições fora da dieta' color='SECONDARY' />
 				</Container4>
 			</RoundBg>
-		</Container>
+		</Bg>
 	);
 }
