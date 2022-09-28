@@ -1,6 +1,4 @@
-import { Container, Container4, Title, BackButton } from './style';
-
-import { MaterialIcons } from '@expo/vector-icons';
+import { Container4, Title } from './style';
 
 import { TouchableOpacityProps } from 'react-native';
 
@@ -8,28 +6,16 @@ import { TitleSubtitle } from '../../components/TitleSubtitle';
 import { StatsBox } from '../../components/StatsBox';
 import { RoundBg } from '../../components/RoundBg';
 import { Bg } from '../../components/Bg';
-import { useNavigation } from '@react-navigation/native';
+import { BackButton } from '../../components/BackButton';
 
 type Props = TouchableOpacityProps & {
 	type?: 'PRIMARY' | 'SECONDARY';
 };
 
 export function Statistics({ type = 'PRIMARY', ...rest }: Props) {
-	const navigation = useNavigation();
-
-	function handleBackToHome() {
-		navigation.navigate('home');
-	}
-
 	return (
 		<Bg type={type}>
-			<BackButton {...rest} onPress={handleBackToHome}>
-				<MaterialIcons
-					name="arrow-back"
-					size={30}
-					color={type === 'PRIMARY' ? '#639339' : '#BF3B44'}
-				/>
-			</BackButton>
+			<BackButton type={type} />
 			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 			<RoundBg>
 				<Title>Estatísticas Gerais</Title>

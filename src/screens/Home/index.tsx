@@ -14,11 +14,15 @@ export function Home() {
 		navigation.navigate('statistics');
 	}
 
+  function handleOpenNewMeal() {
+    navigation.navigate('new')
+  }
+
 	return (
 		<Container>
 			<Header />
 			<Stats handleOpenStats={handleOpenStats} />
-			<AddNewMeal />
+			<AddNewMeal handleOpenNewMeal={handleOpenNewMeal} />
 			<MealsList />
 		</Container>
 	);

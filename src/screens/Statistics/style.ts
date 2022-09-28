@@ -38,10 +38,5 @@ export const Container4 = styled.View`
 	justify-content: space-between;
 
 	width: 90%;
-`;
-
-export const BackButton = styled(TouchableOpacity)`
-	position: absolute;
-	top: 35px;
-	left: 20px;
+  padding-bottom: 200px;
 `;
