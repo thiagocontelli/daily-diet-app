@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components/native';
 
 import { TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type Props = {
 	type: 'PRIMARY' | 'SECONDARY';
 };
 
-export const Container = styled.View<Props>`
+export const Container = styled(SafeAreaView)<Props>`
 	${({ theme, type }) =>
 		type === 'PRIMARY'
 			? css`
