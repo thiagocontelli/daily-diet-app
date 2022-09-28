@@ -1,10 +1,14 @@
-import { Text } from 'react-native';
 import { TitleSubtitle } from '../TitleSubtitle';
-import { Container, Percent, Arrow } from './style';
+import { Container, Arrow } from './style';
+import {TouchableOpacityProps} from 'react-native'
 
-export function Stats() {
+type Props = TouchableOpacityProps & {
+	handleOpenStats: () => void;
+};
+
+export function Stats({ handleOpenStats, ...rest }: Props) {
 	return (
-		<Container>
+		<Container onPress={handleOpenStats} {...rest}>
 			<Arrow />
 			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 		</Container>

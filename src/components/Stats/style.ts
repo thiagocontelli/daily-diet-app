@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components/native';
 import { ArrowUpRight } from 'phosphor-react-native';
+import { TouchableOpacity } from 'react-native';
 
-export const Container = styled.View`
+export const Container = styled(TouchableOpacity)`
 	width: 100%;
 
 	background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
