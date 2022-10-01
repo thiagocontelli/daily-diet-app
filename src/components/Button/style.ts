@@ -1,5 +1,4 @@
 import { TouchableOpacity } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons';
 import styled, { css } from 'styled-components/native';
 
 type Props = {
@@ -23,6 +22,7 @@ export const Container = styled(TouchableOpacity)<Props>`
 	justify-content: center;
 
 	height: 50px;
+	width: 100%;
 
 	border-radius: 6px;
 `;

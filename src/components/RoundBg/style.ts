@@ -4,7 +4,6 @@ export const Container = styled.View`
 	background-color: ${({ theme }) => theme.COLORS.WHITE};
 
 	width: 100%;
-	height: 75%;
 
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;

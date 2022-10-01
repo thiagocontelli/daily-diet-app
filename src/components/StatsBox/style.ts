@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components/native";
+import styled, { css } from 'styled-components/native';
 
 type Props = {
-  color?: 'PRIMARY' | 'SECONDARY';
-  width?: string;
-}
+	color?: 'PRIMARY' | 'SECONDARY';
+	width?: string;
+};
 
 export const Container = styled.View<Props>`
 	align-items: center;
@@ -15,11 +15,14 @@ export const Container = styled.View<Props>`
 
 	border-radius: 8px;
 
-  ${({width}) => width ? css`
-    width: ${width};
-  ` : css`
-    width: 90%;
-  `}
+	${({ width }) =>
+		width
+			? css`
+					width: ${width};
+			  `
+			: css`
+					width: 90%;
+			  `}
 
 	${({ theme, color }) =>
 		color === 'PRIMARY'
@@ -33,7 +36,7 @@ export const Container = styled.View<Props>`
 			: css`
 					background-color: ${theme.COLORS.GRAY_6};
 			  `}
-`
+`;
 
 export const Number = styled.Text`
 	${({ theme }) => css`
@@ -41,7 +44,7 @@ export const Number = styled.Text`
 		color: ${theme.COLORS.GRAY_1};
 	`}
 	font-size: 24px;
-`
+`;
 
 export const Text = styled.Text`
 	${({ theme }) => css`
@@ -50,4 +53,4 @@ export const Text = styled.Text`
 	`}
 
 	text-align: center;
-`
+`;

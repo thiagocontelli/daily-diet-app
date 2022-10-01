@@ -5,12 +5,19 @@ import { MaterialIcons } from '@expo/vector-icons';
 type Props = TouchableOpacityProps & {
 	title: string;
 	type?: 'PRIMARY' | 'SECONDARY';
-	icon: any;
+	icon?: any;
+	handle?: () => void;
 };
 
-export function Button({ title, type = 'PRIMARY', icon, ...rest }: Props) {
+export function Button({
+	handle,
+	title,
+	type = 'PRIMARY',
+	icon,
+	...rest
+}: Props) {
 	return (
-		<Container type={type} {...rest}>
+		<Container onPress={handle} type={type} {...rest}>
 			<MaterialIcons
 				name={icon}
 				size={24}

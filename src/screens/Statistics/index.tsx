@@ -1,11 +1,4 @@
-import {
-	Container,
-	Container4,
-	Title,
-	BackButton,
-} from './style';
-
-import { MaterialIcons } from '@expo/vector-icons';
+import { Container4, Title } from './style';
 
 import { TouchableOpacityProps } from 'react-native';
 
@@ -13,6 +6,7 @@ import { TitleSubtitle } from '../../components/TitleSubtitle';
 import { StatsBox } from '../../components/StatsBox';
 import { RoundBg } from '../../components/RoundBg';
 import { Bg } from '../../components/Bg';
+import { BackButton } from '../../components/BackButton';
 
 import {useNavigation} from '@react-navigation/native'
 
@@ -21,30 +15,30 @@ type Props = TouchableOpacityProps & {
 };
 
 export function Statistics({ type = 'PRIMARY', ...rest }: Props) {
-
-  const navigation = useNavigation()
-
-  function handleBackToHome() {
-    navigation.navigate('home')
-  }
-  
 	return (
 		<Bg type={type}>
-			<BackButton {...rest} onPress={handleBackToHome}>
-				<MaterialIcons
-					name="arrow-back"
-					size={30}
-					color={type === 'PRIMARY' ? '#639339' : '#BF3B44'}
-				/>
-			</BackButton>
+			<BackButton type={type} />
 			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 			<RoundBg>
 				<Title>Estatísticas Gerais</Title>
-        <StatsBox number='22' text='melhor sequência de pratos dentro da dieta' />
-				<StatsBox number='109' text='refeições registradas' />
+				<StatsBox
+					number="22"
+					text="melhor sequência de pratos dentro da dieta"
+				/>
+				<StatsBox number="109" text="refeições registradas" />
 				<Container4>
-          <StatsBox width='49%' number='99' text='refeições dentro da dieta' color='PRIMARY' />
-          <StatsBox width='49%' number='10' text='refeições fora da dieta' color='SECONDARY' />
+					<StatsBox
+						width="49%"
+						number="99"
+						text="refeições dentro da dieta"
+						color="PRIMARY"
+					/>
+					<StatsBox
+						width="49%"
+						number="10"
+						text="refeições fora da dieta"
+						color="SECONDARY"
+					/>
 				</Container4>
 			</RoundBg>
 		</Bg>

@@ -1,11 +1,16 @@
+import { TouchableOpacityProps } from 'react-native';
 import { Button } from '../Button';
 import { Container, Title } from './style';
 
-export function AddNewMeal() {
+type Props = {
+  handleOpenNewMeal: () => void;
+}
+
+export function AddNewMeal({handleOpenNewMeal, ...rest}: Props) {
 	return (
-		<Container>
+		<Container {...rest} onPress={handleOpenNewMeal}>
 			<Title>Refeições</Title>
-			<Button title="Nova Refeição" icon={'add'} />
+			<Button handle={handleOpenNewMeal} title="Nova Refeição" icon={'add'} />
 		</Container>
 	);
 }

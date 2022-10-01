@@ -1,21 +1,14 @@
-import { Text } from 'react-native';
 import { TitleSubtitle } from '../TitleSubtitle';
 import { Container, Arrow } from './style';
 import {TouchableOpacityProps} from 'react-native'
-import {useNavigation} from '@react-navigation/native'
 
-type Props = TouchableOpacityProps
+type Props = TouchableOpacityProps & {
+	handleOpenStats: () => void;
+};
 
-export function Stats({...rest}: Props) {
-
-  const navigation = useNavigation()
-  
-  function handleViewStats() {
-    navigation.navigate('statistics')
-  }
-  
+export function Stats({ handleOpenStats, ...rest }: Props) {
 	return (
-		<Container {...rest} onPress={handleViewStats}>
+		<Container onPress={handleOpenStats} {...rest}>
 			<Arrow />
 			<TitleSubtitle title="90,86%" subtitle="das refeições dentro da dieta" />
 		</Container>

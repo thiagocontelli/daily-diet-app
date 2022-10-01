@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components/native';
 
 import { TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 type Props = {
 	type: 'PRIMARY' | 'SECONDARY';
 };
 
-export const Container = styled.View<Props>`
+export const Container = styled(SafeAreaView)<Props>`
 	${({ theme, type }) =>
 		type === 'PRIMARY'
 			? css`
@@ -37,10 +38,5 @@ export const Container4 = styled.View`
 	justify-content: space-between;
 
 	width: 90%;
-`;
-
-export const BackButton = styled(TouchableOpacity)`
-	position: absolute;
-	top: 35px;
-	left: 20px;
+  padding-bottom: 200px;
 `;

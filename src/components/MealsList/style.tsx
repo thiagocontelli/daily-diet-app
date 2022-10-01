@@ -11,7 +11,7 @@ export const Container = styled.View`
 `;
 
 export const MealInfo = styled.TouchableOpacity`
-	border: 1px solid ${({ theme }) => theme.COLORS.GRAY_6};
+	border: 1px solid ${({ theme }) => theme.COLORS.GRAY_4};
 	border-radius: 6px;
 
 	height: 49px;
