@@ -14,14 +14,23 @@ import { StatsBox } from '../../components/StatsBox';
 import { RoundBg } from '../../components/RoundBg';
 import { Bg } from '../../components/Bg';
 
+import {useNavigation} from '@react-navigation/native'
+
 type Props = TouchableOpacityProps & {
 	type?: 'PRIMARY' | 'SECONDARY';
 };
 
 export function Statistics({ type = 'PRIMARY', ...rest }: Props) {
+
+  const navigation = useNavigation()
+
+  function handleBackToHome() {
+    navigation.navigate('home')
+  }
+  
 	return (
 		<Bg type={type}>
-			<BackButton {...rest}>
+			<BackButton {...rest} onPress={handleBackToHome}>
 				<MaterialIcons
 					name="arrow-back"
 					size={30}
