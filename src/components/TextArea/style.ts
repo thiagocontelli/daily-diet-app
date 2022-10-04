@@ -16,8 +16,6 @@ export const Label = styled.Text`
 `;
 
 export const TextAreaField = styled.TextInput`
-	height: 120px;
-
 	border: 2px solid ${({ theme }) => theme.COLORS.GRAY_5};
 
 	border-radius: 6px;

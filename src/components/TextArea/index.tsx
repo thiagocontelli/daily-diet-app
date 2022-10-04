@@ -8,7 +8,11 @@ export function TextArea({ title }: Props) {
 	return (
 		<Container>
 			<Label>{title}</Label>
-			<TextAreaField />
+			<TextAreaField
+				multiline={true}
+				numberOfLines={5}
+				style={{ textAlignVertical: 'top' }}
+			/>
 		</Container>
 	);
 }
