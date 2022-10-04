@@ -12,6 +12,7 @@ export function TextArea({ title }: Props) {
 				multiline={true}
 				numberOfLines={5}
 				style={{ textAlignVertical: 'top' }}
+        maxLength={140}
 			/>
 		</Container>
 	);
