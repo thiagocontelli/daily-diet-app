@@ -1,19 +1,16 @@
-import { Container, TextAreaField, Label } from './style';
+import { TextAreaField } from './style';
 
 type Props = {
-	title: string;
+	title?: string;
 };
 
 export function TextArea({ title }: Props) {
 	return (
-		<Container>
-			<Label>{title}</Label>
-			<TextAreaField
-				multiline={true}
-				numberOfLines={5}
-				style={{ textAlignVertical: 'top' }}
-        maxLength={140}
-			/>
-		</Container>
+		<TextAreaField
+			multiline={true}
+			numberOfLines={5}
+			style={{ textAlignVertical: 'top' }}
+			maxLength={140}
+		/>
 	);
 }
