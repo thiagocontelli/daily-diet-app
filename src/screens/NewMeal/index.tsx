@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Text } from './style';
 import { BackButton } from '../../components/BackButton';
 import { Bg } from '../../components/Bg';
 import { Button } from '../../components/Button';
@@ -23,12 +23,14 @@ export function NewMeal() {
 				<BackButton />
 				<Title>Nova Refeição</Title>
 				<RoundBg>
-					<Input title="Nome" />
-					<TextArea title="Descrição" />
-					<Container2>
-						<Input keyboardType="numeric" width="49%" title="Data" />
-						<Input keyboardType="numeric" width="49%" title="Hora" />
-					</Container2>
+					<Text>Nome</Text>
+					<Input />
+					<Text>Descrição</Text>
+					<TextArea />
+					<Text>Data</Text>
+					<Input keyboardType="numeric" />
+					<Text>Hora</Text>
+					<Input keyboardType="numeric" />
 					<Container3>
 						<OnDietText>Está dentro da dieta</OnDietText>
 						<Container4>

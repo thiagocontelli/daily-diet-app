@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 
 export const Container = styled.View`
 	background-color: ${({ theme }) => theme.COLORS.WHITE};
@@ -10,7 +10,5 @@ export const Container = styled.View`
 
 	margin-top: 32px;
 
-	align-items: center;
-
-	padding-top: 30px;
+	padding: 0 24px 0 24px;
 `;
